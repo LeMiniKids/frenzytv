@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrenzyTv</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 30px 0;
+      letter-spacing: 2px;
+      color: #ff4747;
+      text-shadow: 0 0 15px #ff4747;
+    }
+
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: #ff4747;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff6b6b;
+      transform: scale(1.05);
+    }
+
+    video {
+      display: none;
+      width: 80%;
+      max-width: 900px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255, 71, 71, 0.6);
+    }
+
+    .visible {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FrenzyTv</h1>
+
+  <button onclick="toggleVideo('forest')">Kpop Demon Hunters</button>
+  <video id="forest" controls>
+    <source src="https://pomf2.lain.la/f/7jov8c5.mp4" type="video/mp4">
+  </video>
+
+  <button onclick="toggleVideo('minecraft')">A minecraft movie </button>
+  <video id="minecraft" controls>
+    <source src="https://pomf2.lain.la/f/1d176wd0.mp4" type="video/mp4">
+  </video>
+
+  <button onclick="toggleVideo('mario')">The Super Mario Bros. Movie</button>
+  <video id="mario" controls>
+    <source src="https://ia601304.us.archive.org/22/items/ok-ass-fire-movies/maro%20but%20x264.mp4" type="video/mp4">
+  </video>
+
+  <button onclick="toggleVideo('deadpool')">Deadpool & Wolverine </button>
+  <video id="deadpool" controls>
+    <source src="https://media.oct-cdn.co/?token=M2c0NClkdG0GHRIHHF9dSQwUCxwVSR8OGRsYCxYaBRoXGwVmJi4rajI8LgBEBwILDB1JXEddR1JRR1ddX08MVkRVX0FaBylzcnV1InotCg8EQwoBRgdYR1YWVlRZAgJaSRkGEApTT19VeyclIHUiK3pZWwARDVMTBFpBWEsDVhVdR1hCCAlREFNHWFJ6dnh3cXN9bUJLFBIJAAADHFVVUAoTAx8BVFlFCRoLGB8KFz0rIyoqJSUqCkcIEhtKUEpMGB0bBQ4ZTUhMHh4bBxdUWUACJSo3LyA1OyEMBQkUBAAWSAASG1BORRYDHkxMSE1bRgYTDgAtNzJkfz1sF0MvCQUYBAACCxNCNA0VVVVQX0ZZQUZUWFhdV35rc3JyZGJtLS9LPj8mHRMAAx0LQF1VLTZMWkg6BAEcWy4DLSs1ZH9kAyAUAAobDkpHSF5VQ1A6SjQDGwsYHkI-CggZTV5qPh1kMS8jKhQGCBIzR0g6TDYcGwNIMwcTBRc2TQpGEws" type="video/mp4">
+  </video>
+
+  <button onclick="toggleVideo('blackphone')">The Black Phone </button>
+  <video id="blackphone" controls>
+    <source src="https://usa7-hs101.shegu.net/vip/p1/movie_mp4_h264/2021/4/9/42089/movie.42089.2021.1080p.H264.20220715095118.mp4?KEY1=5U0zf_9O5O95IcUc3JK4Gw&KEY2=1762410571&KEY3=690298&KEY4=world&KEY7=febbox_video_quality_list_v3&KEY8=690298" type="video/mp4">
+  </video>
+
+  <button onclick="toggleVideo('blackphone2')">The Black Phone 2 </button>
+  <video id="blackphone2" controls>
+    <source src="https://usa7-nas31-1.shegu.net/vip/p1/movie_mp4_h264/2025/7/4/72844/movie.72844.2025.1080p.H264.20251105040806.mp4?KEY1=hHjvm2A4teMAG-7HeboLWA&KEY2=1762410694&KEY3=661564&KEY4=world&KEY7=febbox_video_quality_list_v3&KEY8=661564" type="video/mp4">
+  </video>
+
+  <button onclick="toggleVideo('terrifier')">Terrifier </button>
+  <video id="terrifier" controls>
+    <source src="https://usa7-hs101.shegu.net/vip/p1/movie_mp4_h264/2021/4/9/42089/movie.42089.2021.1080p.H264.20220715095118.mp4?KEY1=5U0zf_9O5O95IcUc3JK4Gw&KEY2=1762410571&KEY3=690298&KEY4=world&KEY7=febbox_video_quality_list_v3&KEY8=690298" type="video/mp4">
+  </video>
+
+  <button onclick="toggleVideo('terrifier2')">Terrifier 2 </button>
+  <video id="terrifier2" controls>
+    <source src="https://usa7-nas31-1.shegu.net/vip/p1/movie_mp4_h264/2025/7/4/72844/movie.72844.2025.1080p.H264.20251105040806.mp4?KEY1=hHjvm2A4teMAG-7HeboLWA&KEY2=1762410694&KEY3=661564&KEY4=world&KEY7=febbox_video_quality_list_v3&KEY8=661564" type="video/mp4">
+  </video>
+
+  <button onclick="toggleVideo('terrifier3')">Terrifier 3 </button>
+  <video id="terrifier3" controls>
+    <source src="https://usa7-nas31-1.shegu.net/vip/p1/movie_mp4_h264/2024/6/4/66484/movie.66484.2024.1080p.H264.20241129032302.mp4?KEY1=RntpgFUP6xBvAanDj3zNIw&KEY2=1762411249&KEY3=693518&KEY4=world&KEY7=febbox_video_quality_list_v3&KEY8=693518" type="video/mp4">
+  </video>
+
+  <script>
+    function toggleVideo(id) {
+      const video = document.getElementById(id);
+      const isVisible = video.classList.contains('visible');
+      
+      document.querySelectorAll('video').forEach(v => {
+        v.pause();
+        v.classList.remove('visible');
+      });
+
+      if (!isVisible) video.classList.add('visible');
+    }
+  </script>
+
+</body>
+</html>
