@@ -1,113 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FrenzyTv</title>
-  <style>
-    body {
-      background-color: #0a0a0a;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin: 30px 0;
-      letter-spacing: 2px;
-      color: #ff4747;
-      text-shadow: 0 0 15px #ff4747;
-    }
-
-    button {
-      display: block;
-      margin: 15px auto;
-      padding: 12px 25px;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      background: #ff4747;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #ff6b6b;
-      transform: scale(1.05);
-    }
-
-    video {
-      display: none;
-      width: 80%;
-      max-width: 900px;
-      margin: 20px auto;
-      border-radius: 10px;
-      box-shadow: 0 0 25px rgba(255, 71, 71, 0.6);
-    }
-
-    .visible {
-      display: block;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frenzy Tv</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            color: #ffd500;
+            margin: 0;
+            padding: 20px;
+        }
+        nav { display:flex; gap:20px; padding:15px; background:#111; border-radius:10px; }
+        nav a { color:white; text-decoration:none; font-size:18px; }
+        h1 { text-align:center; margin-bottom:20px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .film { position: relative; overflow: hidden; border-radius: 10px; cursor: pointer; transition: transform 0.3s ease; }
+        .film img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; transition: transform 0.3s ease; }
+        .film:hover img { transform: scale(1.08); }
+    </style>
 </head>
 <body>
+    
 
-  <h1>FrenzyTv</h1>
+    <h1>Frenzy Tv</h1>
 
-  <button onclick="toggleVideo('forest')">Kpop Demon Hunters</button>
-  <video id="forest" controls>
-    <source src="https://pomf2.lain.la/f/7jov8c5.mp4" type="video/mp4">
-  </video>
 
-  <button onclick="toggleVideo('minecraft')">A minecraft movie </button>
-  <video id="minecraft" controls>
-    <source src="https://pomf2.lain.la/f/1d176wd0.mp4" type="video/mp4">
-  </video>
+    
+    <div class="grid">
 
-  <button onclick="toggleVideo('mario')">The Super Mario Bros. Movie</button>
-  <video id="mario" controls>
-    <source src="https://ia601304.us.archive.org/22/items/ok-ass-fire-movies/maro%20but%20x264.mp4" type="video/mp4">
-  </video>
+    <a class="film" href="https://ia601304.us.archive.org/22/items/ok-ass-fire-movies/maro%20but%20x264.mp4" target="_blank">
+        <img src="https://i.imgur.com/HBt4FeA.jpeg" alt="Film 1">
+    </a>
 
-    <button onclick="toggleVideo('spies')">Spies in Disguise</button>
-  <video id="spies" controls>
-    <source src="sus.mp4" type="video/mp4">
-  </video>
-  
-    <button onclick="toggleVideo('terr3')">Terrifier 3</button>
-  <video id="terr3" controls>
-    <source src="terrifier 3.mp4" type="video/mp4">
-  </video>
+    <a class="film" href="https://pomf2.lain.la/f/7jov8c5.mp4" target="_blank">
+        <img src="https://i.imgur.com/ICAmxKP.jpeg" alt="Film 2">
+    </a>
 
-  <script>
-    function toggleVideo(id) {
-      const video = document.getElementById(id);
-      const isVisible = video.classList.contains('visible');
-      
-      document.querySelectorAll('video').forEach(v => {
-        v.pause();
-        v.classList.remove('visible');
-      });
+    <a class="film" href="https://zupload.io/en/dggSOuPKOEV3lyB/watch" target="_blank">
+        <img src="https://i.imgur.com/szSbsgj.jpeg" alt="Film 3">
+    </a>
 
-      if (!isVisible) video.classList.add('visible');
-    }
-  </script>
+    <a class="film" href="https://pomf2.lain.la/f/1d176wd0.mp4" target="_blank">
+        <img src="https://i.imgur.com/nZGv6Y3.jpeg" alt="Film 4">
+    </a>
+
+</div>
+
+
+    <h1 style="color:#ffd500; text-align:center; margin-top:40px;">Frenzy Français</h1>
+    <div class="grid">
+        <a class="film" href="#" target="_blank">
+            <img src="/mnt/data/0d7f0e60-b436-454b-b431-9a15b1b1f7fb.png" alt="Exemple Français">
+        </a>
+    </div>
 
 </body>
 </html>
+
 
 
